@@ -1,7 +1,9 @@
 body{
     font-family: 'Inter', sans-serif;
     background: #E5E5E5;
+    
 }
+
 .logo{
     display: flex;
     flex-direction: column;
@@ -23,8 +25,14 @@ body{
     position: relative;
     left: 240px;
     top: 168px;
-    max-width: 680px;
+    max-width: 480px;
     max-height: 600px;   
+}
+
+.area-texto{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
 }
 
 #textoParaEncriptar{
@@ -40,61 +48,119 @@ body{
     max-height: 425px;
 }
 
-.area-texto{
-    display: flex;
-    flex-direction: column;
-}
 ::placeholder{
     color: darkblue;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 150%;
     font-weight: 400;
 }
 
 .area-texto label{
     display: flex;
-    align-items: center;
-    padding: 0;
+    margin: 8px 0;
     gap: 8px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 150%;
     color: #495057;
     opacity: 0.8;
 }
 
 .botones{
-    /*display: flex;
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;*/
-    gap: 24px;
-    
+    gap: 30px;
 }
 
 #boton-encriptar{
-    padding: 24px;
-    gap: 8px;
-    width: 328px;
-    height: 67px;
     background: #0A3871;
-    border-radius: 24px;
-    font-size: 16px;
+    color: #ffffff;
+    font-size: 24px;
     line-height: 19px;
     text-align: center;
-    color: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+    width: 328px;
+    height: 67px;
 }
 
 #boton-desencriptar{
-    padding: 24px;
-    gap: 8px;
-    width: 328px;
-    height: 67px;
     background: #D8DFE8;
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    font-size: 16px;
+    color: #0A3871;
+    font-size: 24px;
     line-height: 19px;
     text-align: center;
-    color: #0A3871;
+    border-radius: 24px;
+    border: px solid #0A3871;
+    padding: 24px;
+    width: 328px;
+    height: 67px;
 }
 
+/*empieza zona de salida de texto en html*/
+
+.zona-salida{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 800px;
+    width: 400px;
+    
+}
+
+.recuadro-zona-salida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border-radius: 32px;
+    box-shadow: 0px 15px 32px -8px rgba(0, 0, 0, 0.88)  ;
+    max-width: 100%; 
+    height: 680px;
+}
+.muñeco{
+    flex: 1 50%;
+    margin-top: 30%;
+}
+.avisos-no-textos{
+    flex: 1 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+}
+.avisos-no-textos p:nth-child(1){
+    color: #343A40;
+    font-size: 24px;
+    text-align: center;
+    padding: 0px 10px;
+    font-weight: 700;
+    line-height: 120%;
+}
+.avisos-no-textos p:nth-child(2){
+    color: #495057;
+    font-size: 16px;
+    text-align: center;
+    padding: 0px 10px;
+    font-weight: 400;
+    line-height: 120%;
+}
+#boton-copiar{
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 24px;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    padding: 24px;
+    width: 300px;
+    height: 67px;
+}

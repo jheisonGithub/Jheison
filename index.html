@@ -13,7 +13,6 @@
 
     <body>
         <header>
-
         </header>
 
         <main>
@@ -27,18 +26,29 @@
             
                 <div class="area-texto">            
                     <textarea cols="80" rows="20" siz id="textoParaEncriptar" placeholder="Ingrese aquí el texto"></textarea>
-                    <label class="sisi" for="textoParaEncriptar" required ><img src="Elementos/bi_exclamation-circle-fill.png" alt="Signo exclamacion">Solo letras minúsculas y sin acentos</label>                
+                    <label for="textoParaEncriptar" required ><img src="Elementos/bi_exclamation-circle-fill.png" alt="Signo exclamacion">Solo letras minúsculas y sin acentos</label>                
                 </div>
 
                 <div class="botones"> <!--dejo notas en este botón para ver posibles usos en el futuro en el programa, y atributos tipo value, name e id-->
                     <button id="boton-encriptar" name="encriptar" type="button" value="encriptando">Encriptar</button> 
-
                     <button id="boton-desencriptar" name="desencriptar" type="button" value="desencriptando">Desencriptar</button>
                 </div>
                 
             </section>
+            
             <section class="zona-salida">
-
+                <div class="recuadro-zona-salida">
+                    <div class="muñeco">
+                        <img src="elementos/Muñeco.png" alt="Img muñeco buscando">
+                    </div>    
+                    <div class="avisos-no-textos">
+                        <p>Ningún Mensaje fue encontrado</p>
+                        <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    </div>
+                    <div class="boton-copiar">
+                        <button id="boton-copiar" name="copiar" type="button" value="copiando" disabled>Copiar</button> 
+                    </div>
+                </div>
             </section>
         </main>
 
