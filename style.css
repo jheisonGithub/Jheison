@@ -1,0 +1,100 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background: #E5E5E5;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;    
+
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    left: 40px;
+    top: 40px;
+}
+
+
+.zona-entrada{
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    left: 240px;
+    top: 168px;
+    max-width: 680px;
+    max-height: 600px;   
+}
+
+#textoParaEncriptar{
+    color: #0A3871;
+    font-size: 32px;
+    line-height: 150%;
+    font-weight: 400;
+    background: #E5E5E5;
+    padding: 0px;
+    border: none;
+    resize: none;
+    max-width: 680px;
+    max-height: 425px;
+}
+
+.area-texto{
+    display: flex;
+    flex-direction: column;
+}
+::placeholder{
+    color: darkblue;
+    font-size: 32px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.area-texto label{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.botones{
+    /*display: flex;
+    flex-direction: row;
+    align-items: flex-start;*/
+    gap: 24px;
+    
+}
+
+#boton-encriptar{
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#boton-desencriptar{
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+}
+
