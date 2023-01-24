@@ -15,7 +15,7 @@
         <header>
         </header>
 
-        <main>
+        <main class="paraCel">
             <section class="logo">
                 <div>
                     <img  src="Elementos/Logo_desktop.png   " alt="Logo Encriptador Alura">
@@ -30,24 +30,30 @@
                 </div>
 
                 <div class="botones"> <!--dejo notas en este botón para ver posibles usos en el futuro en el programa, y atributos tipo value, name e id-->
-                    <button id="boton-encriptar" name="encriptar" type="button" value="encriptando">Encriptar</button> 
-                    <button id="boton-desencriptar" name="desencriptar" type="button" value="desencriptando">Desencriptar</button>
+                    <button id="boton-encriptar" name="encriptar" type="button" value="encriptando" onclick="fnEncriptar()" >Encriptar</button> 
+                    <button id="boton-desencriptar" name="desencriptar" type="button" value="desencriptando" onclick="fnDesencriptar()">Desencriptar</button>
                 </div>
                 
             </section>
             
             <section class="zona-salida">
                 <div class="recuadro-zona-salida">
-                    <div class="muñeco">
-                        <img src="elementos/Muñeco.png" alt="Img muñeco buscando">
-                    </div>    
+                    <div id=cuadroTextoSalida class="cuadro_texto_salida" style="visibility: hidden">
+                    </div>
+
+                    <div id="muhneco">
+                        <img src="elementos/Muñeco.png" alt="Img muñeco buscando" >
+                    </div>  
+
                     <div class="avisos-no-textos">
                         <p>Ningún Mensaje fue encontrado</p>
                         <p>Ingresa el texto que desees encriptar o desencriptar</p>
                     </div>
+
                     <div class="boton-copiar">
-                        <button id="boton-copiar" name="copiar" type="button" value="copiando" disabled>Copiar</button> 
+                        <button id="boton-copiar" name="copiar" type="button" value="copiando" style="visibility: hidden" onclick="fnCopiar()">Copiar</button> 
                     </div>
+
                 </div>
             </section>
         </main>
@@ -57,6 +63,52 @@
         </footer>
   
     </body>
+
+    <script>
+        const cajaSalidaTexto = document.querySelector("#cuadroTextoSalida");
+        const textoTextArea=document.querySelector("#textoParaEncriptar");
+        const imgMuhneco=document.querySelector("#muhneco");
+        const avisosIngresarTexto=document.querySelector(".avisos-no-textos");
+        const btnCopiar = document.querySelector("#boton-copiar")
+
+        function fnEncriptar(){
+            if (textoTextArea.value==""){
+                
+            }else{
+                imgMuhneco.style.visibility="hidden";
+                avisosIngresarTexto.style.visibility="hidden";
+                cajaSalidaTexto.style.visibility="visible";
+                btnCopiar.style.visibility="visible"
+
+                cajaSalidaTexto.textContent=textoTextArea.value.replaceAll("a","1x1").replaceAll("e","2c2").replaceAll("i","3v3").replaceAll("o","4b4").replaceAll("u","5n5").replaceAll("1x1","ai").replaceAll("2c2","enter").replaceAll("3v3","imes").replaceAll("4b4","ober").replaceAll("5n5","ufat");
+
+                textoTextArea.value="";
+            }
+
+        }
+
+        function fnDesencriptar(){
+            if (textoTextArea.value==""){
+                
+            }else{
+                imgMuhneco.style.visibility="hidden";
+                avisosIngresarTexto.style.visibility="hidden";
+                cajaSalidaTexto.style.visibility="visible";
+                btnCopiar.style.visibility="visible"
+
+                cajaSalidaTexto.textContent=textoTextArea.value.replaceAll("ai","a").replaceAll("enter","e").replaceAll("imes","i").replaceAll("ober","o").replaceAll("ufat","u");
+
+                textoTextArea.value="";
+            }
+        }
+        
+        function fnCopiar(){
+            cajaSalidaTexto.value.select();
+            const textCopiadoo =document.execCommand("copy");
+            alert(textCopiadoo); 
+        }
+
+    </script>
 
 
 

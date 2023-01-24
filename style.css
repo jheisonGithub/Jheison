@@ -122,7 +122,7 @@ body{
     max-width: 100%; 
     height: 680px;
 }
-.muñeco{
+.muhneco{
     flex: 1 50%;
     margin-top: 30%;
 }
@@ -159,8 +159,63 @@ body{
     line-height: 19px;
     text-align: center;
     border-radius: 24px;
-    border: 1px solid #0A3871;
+    border: px solid #0A3871;
     padding: 24px;
     width: 300px;
     height: 67px;
+}
+
+/*empiza el desarrollo en conjunto de elementos para interaccion con java*/
+
+.cuadro_texto_salida{
+    background: #ffffff;
+    position: relative;
+    top: 30px;
+    left: 0px;
+    max-width: 85%; 
+    height: 500px;
+    color: #495057;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 400;
+    text-align:left;
+}
+
+@media screen and (max-width:480px) {
+
+    main{
+        width: auto;
+        background: red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .botones{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 40px;    
+    
+        position: relative;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .zona-entrada{
+        display: flex;
+        flex-direction: column; 
+        position: relative;
+        width: auto;
+    }
+    .zona-salida{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
 }
